@@ -137,8 +137,8 @@ android {
         applicationId "com.appsub"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "3.0"
+        versionCode 6
+        versionName "6.0"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
@@ -219,18 +219,16 @@ android {
     }
     signingConfigs {
         // release {
-        //     if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
-        //         storeFile file(MYAPP_UPLOAD_STORE_FILE)
-        //         storePassword MYAPP_UPLOAD_STORE_PASSWORD
-        //         keyAlias MYAPP_UPLOAD_KEY_ALIAS
-        //         keyPassword MYAPP_UPLOAD_KEY_PASSWORD
-        //     }
+        //     storeFile file(MYAPP_UPLOAD_STORE_FILE)
+        //     storePassword MYAPP_UPLOAD_STORE_PASSWORD
+        //     keyAlias MYAPP_UPLOAD_KEY_ALIAS
+        //     keyPassword MYAPP_UPLOAD_KEY_PASSWORD
         // }
         debug {
-            storeFile file('my-upload-key.keystore')
-            storePassword 'admin12345'
-            keyAlias 'my-key-alias'
-            keyPassword 'admin12345'
+            storeFile file(MYAPP_UPLOAD_STORE_FILE)
+            storePassword MYAPP_UPLOAD_STORE_PASSWORD
+            keyAlias MYAPP_UPLOAD_KEY_ALIAS
+            keyPassword MYAPP_UPLOAD_KEY_PASSWORD
         }
     }
     buildTypes {
