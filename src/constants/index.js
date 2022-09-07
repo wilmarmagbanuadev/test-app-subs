@@ -1,2 +1,2 @@
 
-export const API_KEY = "goog_EBcUavhdmwasbdNvzJPTjeOUbAs";
+export const REV_CAT_API_KEY = "goog_EBcUavhdmwasbdNvzJPTjeOUbAs";
